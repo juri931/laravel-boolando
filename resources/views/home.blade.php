@@ -1,23 +1,26 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.main')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Laravel Boolando</title>
-
-    <!-- Styles -->
-    @vite('resources/js/app.js')
-
-</head>
-
-<body>
-
+@section('content')
     <main>
+    <div class="container">
+      <div class="product">
+        @foreach ($cards as $card)
+            <img class="primary-img" :src="item.img" />
+            <img class="img-hover" :src="item.imgHover" />
+            <div class="disc-eco">
+                <span class="discount">{{ item.discount }}</span>
+                <span class="eco">{{ item.eco }}</span>
+            </div>
+            <span class="heart">&hearts;</span>
 
-    </main>
-
-</body>
-
-</html>
+            <div class="info">
+                <span class="brand">{{ item.brand }}</span>
+                <span class="desc">{{ item.desc }}</span>
+                <span class="price-new">{{ item.priceNew }}</span>
+                <span class="price-old">{{ item.priceOld }}</span>
+            </div>
+        @endforeach
+      </div>
+    </div>
+  </main>
+@endsection
