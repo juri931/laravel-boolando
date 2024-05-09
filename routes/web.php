@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('partials/cards', function(){
-
-})
+Route::get('/cards', function(){
+    $cards = config('cards');
+    return view('cards', compact('cards'));
+});
