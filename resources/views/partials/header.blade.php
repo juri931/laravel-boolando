@@ -3,9 +3,9 @@
     <nav class="top">
         {{-- Categories --}}
         <ul>
-            {{-- @foreach ($index as $item)
+            {{-- @foreach ($menues as $menu)
             <li>
-                <a href="item.href">{{ item.text }}</a>
+                <a href="/home">{{ $menu['text'] }}</a>
             </li>
             @endforeach --}}
         </ul>
