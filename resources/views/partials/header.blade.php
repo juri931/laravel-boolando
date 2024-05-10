@@ -5,7 +5,7 @@
         <ul>
             {{-- @foreach ($menues as $menu)
             <li>
-                <a href="/home">{{ $menu['text'] }}</a>
+                <a href="/home">{{ $menu['main']['text'] }}</a>
             </li>
             @endforeach --}}
         </ul>
